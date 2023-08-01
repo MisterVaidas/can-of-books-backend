@@ -8,7 +8,7 @@ async function seed() {
     await Book.create(
         {
             title: 'Whispers of the Forest',
-            author: 'Sandra Michelle Kessler',
+            author: 'Aarush Narayana',
             description: 'A gripping fantasy novel about a young adventurer who embarks on a quest to save a mystical forest from dark forces, facing trials and making unlikely alliances along the way.',
             status: ['Available in bookstores'],
             coverImageUrl: 'https://www.bribooks.com/_next/image?url=https%3A%2F%2Fyoubooks-storage-5fd6173683748-webdev.s3.amazonaws.com%2Fpublic%2FBookCovers%2Fbook_108994_1.png&w=600&q=75',
