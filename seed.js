@@ -11,7 +11,7 @@ async function seed() {
             author: 'Sandra Michelle Kessler',
             description: 'A gripping fantasy novel about a young adventurer who embarks on a quest to save a mystical forest from dark forces, facing trials and making unlikely alliances along the way.',
             status: ['Available in bookstores'],
-            coverImageUrl: './images/whisperOfForest.jpg',
+            coverImageUrl: '/images/whisperOfForest.jpg',
         }
     );
 
@@ -21,7 +21,7 @@ async function seed() {
             author: 'Aaron Dembski-Bowden',
             description: 'A thought-provoking sci-fi masterpiece exploring the intricacies of time travel and its consequences, as a scientist delves into the enigmatic echoes of the past and future.',
             status: ['Out of stock', 'Reprinting'],
-            coverImageUrl: './images/echoesOfEternity.jpg',
+            coverImageUrl: '/images/echoesOfEternity.jpg',
         }
     );
 
@@ -31,7 +31,7 @@ async function seed() {
             author: 'T. Byram Karasu',
             description: 'A captivating self-help guide that offers practical insights and exercises to cultivate inner peace and mindfulness, empowering readers to navigate lifes challenges with grace.',
             status: ['In stock', 'Bestseller'],
-            coverImageUrl: './images/artOfSerenity.webp',
+            coverImageUrl: '/images/artOfSerenity.webp',
         }
     );
 
@@ -41,7 +41,7 @@ async function seed() {
             author: 'Bea Paige',
             description: 'An epic historical fiction saga set in the 19th century, following the destinies of three families across continents, love, loss, and their relentless pursuit of dreams.',
             status: ['Available in e-book format'],
-            coverImageUrl: './images/beyondTheHorizon.jpg',
+            coverImageUrl: '/images/beyondTheHorizon.jpg',
         }
     );
 
@@ -51,7 +51,7 @@ async function seed() {
             author: 'Deborah Harkness',
             description: 'A gripping psychological thriller where a detective races against time to solve a series of mysterious murders, delving into the darkness of the human psyche.',
             status: ['Pre-order', 'releasing next month'],
-            coverImageUrl: './images/shadowOfNight.jpg',
+            coverImageUrl: '/images/shadowOfNight.jpg',
         }
     )
 
