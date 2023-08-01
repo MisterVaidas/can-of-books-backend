@@ -10,7 +10,13 @@ app.use(cors());
 app.use(bp.json());
 
 const Book = require('./models/book');
-mongoose.connect(process.env.DATABASE_URL);
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+
+const db = mongoose.connection;
+db.on('error', (error) => console.error('Connection error:', error));
+db.once('open', () => console.log('Database connected'));
+
 
 const PORT = process.env.PORT || 3001;
 
@@ -24,5 +30,6 @@ app.get('/books', async (req, res) => {
   const allBooks = await Book.find(req.query);
   res.status(200).json(allBooks);
 })
+
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
