@@ -32,7 +32,15 @@ app.get('/books', async (req, res) => {
 });
 
 app.post('/books', async (req, res) => {
-  const newBook = new Book(req.body);
+  const { title, author, description, status, coverImageUrl } = req.body;
+  
+  const newBook = new Book({
+    title,
+    author,
+    description,
+    status,
+    coverImageUrl
+  });
 
   try {
     const saveBook = await newBook.save();
