@@ -31,6 +31,7 @@ app.get('/books', async (req, res) => {
   res.status(200).json(allBooks);
 });
 
+// Adding new book
 app.post('/books', async (req, res) => {
   const { title, author, description, status, coverImageUrl } = req.body;
   
@@ -50,5 +51,18 @@ app.post('/books', async (req, res) => {
   }
 });
 
+// Delete a specific book by id
+app.delete('/books/:id', async (req, res) => {
+  try {
+    const book = await Book.findByIdAndDelete(req.params.id);
+    if (book == null) {
+      return res.status(404).json({ message: 'Cannot find book' })
+    }
+
+    res.json({ message: 'Deleted book' });
+  } catch (err) {
+    return res.status(500).json({ message: err.message });
+  }
+});
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
